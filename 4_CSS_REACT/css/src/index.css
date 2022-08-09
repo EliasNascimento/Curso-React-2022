@@ -5,10 +5,11 @@ body {
     sans-serif;
   padding: 0;
   padding-bottom: 500px;
+  background-color: indigo
 }
 
 h1 {
-  color: green;
+  color: whitesmoke;
 }
 
 .red-title {
