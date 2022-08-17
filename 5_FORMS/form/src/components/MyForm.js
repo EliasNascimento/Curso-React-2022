@@ -2,20 +2,19 @@ import { useState } from "react";
 
 import "./MyForm.css";
 
-const MyForm = () => {
-  {
-    /* 3 - Alteração de valores */
-  }
+const MyForm = ({ user }) => {
+  /* 3 - Alteração de valores */
 
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  /* 6 - controlled inputs */
+
+  const [name, setName] = useState(user ? user.name : "");
+  const [email, setEmail] = useState(user ? user.email : "");
 
   const handleName = (e) => {
     setName(e.target.value);
   };
 
-  //   console.log(name);
-  //   console.log(email);
+  console.log(user);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,6 +35,7 @@ const MyForm = () => {
             name="name"
             placeholder="Digite o seu nome"
             onChange={handleName}
+            value={name}
           />
         </div>
 
@@ -49,6 +49,7 @@ const MyForm = () => {
             name="email"
             placeholder="Digite o seu e-mail"
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </label>
         <input type="submit" value="Enviar" />

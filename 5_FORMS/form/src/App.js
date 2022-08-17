@@ -7,7 +7,7 @@ function App() {
       <h2> Form </h2>
 
       {/* Meu component  */}
-      <MyForm />
+      <MyForm user={{ name: "João", email: "joaosilva@teste.com" }} />
     </div>
   );
 }
