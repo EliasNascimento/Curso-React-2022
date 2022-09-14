@@ -1,0 +1,3 @@
+[submodule "REQ_HTTP/httpreact"]
+	path = REQ_HTTP/httpreact
+	url = https://github.com/EliasNascimento/Curso-React-2022.git
