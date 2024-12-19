@@ -2,19 +2,32 @@
   "name": "avancando",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "cra-template": "1.2.0",
-    "primereact": "^10.8.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
-  },
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "main": "src/main.jsx",
+  "keywords": [
+    "primereact",
+    "react",
+    "vite",
+    "starter"
+  ],
+  "dependencies": {
+    "@types/react": "^18.2.38",
+    "@vitejs/plugin-react": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.8.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
+    "tailwindcss": "latest",
+    "vite": "latest"
   },
   "eslintConfig": {
     "extends": [

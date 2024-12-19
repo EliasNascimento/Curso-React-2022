@@ -6,16 +6,22 @@ const ManageData = () => {
   const [number, setNumber] = useState(10);
 
   return (
-    <div>
+    <div className="card flex justify-content-center">
       <Card>
-        <p>Value: {number}</p>
-        <div>
-          <Button icon="pi pi-plus" onClick={() => setNumber(number + 10)}>
-            Add 10
-          </Button>
-          <Button icon="pi pi-Sub" onClick={() => setNumber(number - 10)}>
-            Sub 10
-          </Button>
+        <p className="m-0">Value: {number}</p>
+        <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-content-end gap-2">
+            <Button
+              icon="pi pi-plus"
+              label="Add"
+              onClick={() => setNumber(number + 10)}
+            />
+            <Button
+              icon="pi pi-minus"
+              label="Sub"
+              onClick={() => setNumber(number - 10)}
+            />
+          </div>
         </div>
       </Card>
     </div>
