@@ -20,7 +20,7 @@ const ConditionalRender = () => {
                 checked={radioValue === true}
               />
               <label htmlFor="1" className="ml-2">
-                Sim
+                Yes
               </label>
             </div>
             <div className="flex align-items-center">
@@ -32,11 +32,11 @@ const ConditionalRender = () => {
                 checked={radioValue === false}
               />
               <label htmlFor="2" className="ml-2">
-                Não
+                No
               </label>
             </div>
           </div>
-          {radioValue && <h1>Isso esta sendo exibido?</h1>}
+          {radioValue && <h3>This is showed!</h3>}
         </div>
       </Card>
     </div>
