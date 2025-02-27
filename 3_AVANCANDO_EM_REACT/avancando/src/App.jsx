@@ -13,6 +13,7 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/changeMessageState";
 import UserDetails from "./components/UserDetails";
+import ComponenteTeste from "./components/ComponenteTeste";
 
 export default function App() {
   const [userName] = useState("Maria");
@@ -42,6 +43,10 @@ export default function App() {
   return (
     <div className="App">
       <h1>Avançando em React</h1>
+
+      <ComponenteTeste />
+
+
       {/* Imagem em public */}
       <div>
         <img src="/img1.jpg" alt="City" width={600} height={300} />
