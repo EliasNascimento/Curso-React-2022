@@ -1,5 +1,6 @@
 import { useSearchParams, Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import { Card } from "react-bootstrap";
 
 const Search = () => {
   const [searchParams] = useSearchParams();
@@ -12,17 +13,26 @@ const Search = () => {
     <div>
       <h1>Resultados disponíveis</h1>
       {error && <p>{error}</p>}
-      <ul className="products">
+      <div className="products">
         {items &&
           items.map((item) => (
-            <li key={item.id}>
-              <h2>{item.name}</h2>
-              <p>R$: {item.price}</p>
-
-              <Link to={`/products/${item.id}`}>Detalhes</Link>
-            </li>
+            <Card
+              bg="light"
+              key={item.id}
+              text="dark"
+              style={{
+                width: "18rem",
+              }}
+              className="m-1"
+            >
+              <Card.Header>{item.name}</Card.Header>
+              <Card.Body>
+                <Card.Text>R$: {item.price} </Card.Text>
+                <Card.Link href={`/products/${item.id}`}>Detalhes</Card.Link>
+              </Card.Body>
+            </Card>
           ))}
-      </ul>
+      </div>
     </div>
   );
 };

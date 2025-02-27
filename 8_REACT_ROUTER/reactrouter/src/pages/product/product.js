@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import { Card } from "react-bootstrap";
 
 const Product = () => {
   // 4 - rota dinâmica
@@ -16,11 +17,23 @@ const Product = () => {
       {loading && <p>Carregando...</p>}
       {product && (
         <div>
-          <h1>{product.name}</h1>
-          <p>R${product.price}</p>
-
-          {/* 6 - nested routes */}
-          <Link to={`/products/${product.id}/info`}>Mais informações</Link>
+          <Card
+            bg="light"
+            key={product.id}
+            text="dark"
+            style={{
+              width: "18rem",
+            }}
+            className="m-1"
+          >
+            <Card.Header>{product.name}</Card.Header>
+            <Card.Body>
+              <Card.Text>R$: {product.price} </Card.Text>
+              <Card.Link href={`/products/${product.id}/info`}>
+                Mais Informações
+              </Card.Link>
+            </Card.Body>
+          </Card>
         </div>
       )}
     </>

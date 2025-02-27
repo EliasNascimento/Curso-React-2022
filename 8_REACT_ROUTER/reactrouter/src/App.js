@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 // - 1 - config react router
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import NavbarComponent from "./components/NavbarComponent";
 import SearchForm from "./components/SearchForm";
 
 import Home from "./pages/home/Home";
@@ -22,7 +22,7 @@ function App() {
       </header>
       <BrowserRouter>
         {/* 2 - links com React Router */}
-        <Navbar />
+        <NavbarComponent />
 
         {/* 9 - search */}
         <SearchForm />
