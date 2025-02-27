@@ -12,7 +12,6 @@ import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/changeMessageState";
-import Challenge4 from "./components/UserDetails";
 import UserDetails from "./components/UserDetails";
 
 export default function App() {
